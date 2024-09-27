@@ -1,0 +1,56 @@
+.suppliers-container {
+    padding: 20px;
+  }
+  
+  .suppliers-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .suppliers-table th, .suppliers-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .suppliers-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .suppliers-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .suppliers-table td {
+    text-align: center;
+  }
+  
+  .activate-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .deactivate-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .activate-btn:hover, .deactivate-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .supplied {
+    color: green;
+  }
+  
+  .pending {
+    color: red;
+  }
+  

@@ -1,0 +1,116 @@
+
+/* Variables */
+:root{
+  --light-green: #0b9927;
+  --header-background-color: var(--light-green);
+}
+
+/* App container */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height for the App */
+  position: relative;
+  font-family: Inter;
+}
+
+/* Header styling */
+.App-header {
+  background-color: #0b9927; /* Ocean green */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: sticky; /* Fix the header at the top */
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure header stays above other content */
+  border-bottom: 2px solid #005a9e; /* Border for visual connection with sidebar */
+  height: 60px; /* Header height */
+  box-sizing: border-box; /* Include padding and border in height */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 170px;
+  height: calc(100vh - 60px); /* Full viewport height minus header */
+  background-color: #005a9e; /* Dark blue background */
+  position: fixed; /* Sidebar stays fixed on the left */
+  top: 87px; /* Positioned below the header */
+  left: 0;
+  z-index: 900; /* Behind the header but above main content */
+  border-right: 2px solid #0b9927; /* Border to match the header */
+  overflow-y: auto; /* Allow sidebar to scroll if content is too large */
+}
+
+/* Main layout */
+.main-layout {
+  margin-left: 195px; /* Space for sidebar */
+  height: calc(100vh - 60px); /* Full height minus header */
+  overflow-y: auto; /* Enable scrolling for main content */
+  padding: 20px; /* Padding for content */
+  background-color: #ecf0f1; /* Light gray background */
+}
+
+/* Sidebar content */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height */
+}
+
+.sidebar h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Align icons and text */
+  gap: 10px; /* Space between icon and text */
+}
+
+.sidebar ul li a:hover {
+  background-color: #34495e; /* Darker blue on hover */
+  transition: background-color 0.3s ease;
+}
+
+.topBar{
+  display: flex;
+  gap: 1rem;
+  background-color: var(--header-background-color);
+  /* Sidebar toggle button */
+  .sidebar-toggle {
+    width: 2rem;
+    position: flex;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 20px;
+    background-color: transparent;
+  }
+}
+
+
+/* Sidebar toggle button icon */
+.sidebar-toggle i {
+  margin: 0; /* Remove icon margin */
+}
+/* src/App.css or a separate Loader.css */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

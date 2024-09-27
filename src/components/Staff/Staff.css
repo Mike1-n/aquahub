@@ -1,0 +1,87 @@
+/* src/components/Staff.css */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .role-buttons button {
+    background-color: #28a745; /* Green color for role buttons */
+  }
+  
+  .role-buttons button:hover {
+    background-color: #218838; /* Darker green for hover effect */
+  }
+  
+  button.activate {
+    background-color: #28a745; /* Green color for activate */
+  }
+  
+  button.activate:hover {
+    background-color: #218838; /* Darker green for hover effect */
+  }
+  
+  button.deactivate {
+    background-color: #dc3545; /* Red color for deactivate */
+  }
+  
+  button.deactivate:hover {
+    background-color: #c82333; /* Darker red for hover effect */
+  }
+  
+  button.remove {
+    background-color: #ffc107; /* Yellow color for remove */
+  }
+  
+  button.remove:hover {
+    background-color: #e0a800; /* Darker yellow for hover effect */
+  }
+  
+  button.add {
+    background-color: #007bff; /* Blue color for add staff */
+  }
+  
+  button.add:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  .status-active {
+    background-color: #d4edda; /* Light green for active staff */
+  }
+  
+  .status-inactive {
+    background-color: #f8d7da; /* Light red for inactive staff */
+  }
+  
