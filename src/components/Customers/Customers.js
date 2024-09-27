@@ -58,7 +58,7 @@ const Customer = () => {
     const { error } = await supabase
       .from('customers')
       .update({ status: newStatus })
-      .eq('id', customerId);
+      .eq('customer_id', customerId);
 
     if (error) {
       console.error('Error updating customer status:', error);
@@ -113,7 +113,7 @@ const Customer = () => {
                         color: 'white',
                         padding: '5px 10px',
                       }}
-                      onClick={() => toggleCustomerStatus(customer.id, customer.status)}
+                      onClick={() => toggleCustomerStatus(customer.customer_id, customer.status)}
                     >
                       {customer.status === 'active' ? 'Deactivate' : 'Activate'}
                     </button>
