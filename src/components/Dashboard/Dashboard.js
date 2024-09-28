@@ -9,20 +9,20 @@ function Dashboard() {
         <h3>Overview of Activities</h3>
         <div className="dashboard-content">
           <div className="dashboard-box">
-            <h4>Current Orders</h4>
-            <p>10</p>
+            <p className="dashboard-title">Current Orders</p>
+            <h1 className="dashboard-heading">10</h1>
           </div>
           <div className="dashboard-box">
-            <h4>Installations in Progress</h4>
-            <p>5</p>
+            <p className="dashboard-title">Installations in Progress</p>
+            <h1 className="dashboard-heading">5</h1>
           </div>
           <div className="dashboard-box">
-            <h4>Completed Projects</h4>
-            <p>20</p>
+            <p className="dashboard-title">Completed Projects</p>
+            <h1 className="dashboard-heading">20</h1>
           </div>
           <div className="dashboard-box">
-            <h4>Pending Tasks</h4>
-            <p>3</p>
+            <p className="dashboard-title">Pending Tasks</p>
+            <h1 className="dashboard-heading">3</h1>
           </div>
         </div>
       </div>
@@ -32,11 +32,11 @@ function Dashboard() {
         <h3>Analytics & Reports</h3>
         <div className="dashboard-content">
           <div className="dashboard-box">
-            <h4>Graph 1</h4>
+            <p>Graph 1</p>
             {/* Add graph component or placeholder here */}
           </div>
           <div className="dashboard-box">
-            <h4>Graph 2</h4>
+            <p>Graph 2</p>
             {/* Add graph component or placeholder here */}
           </div>
         </div>
@@ -47,13 +47,13 @@ function Dashboard() {
         <h3>Notifications</h3>
         <div className="dashboard-content">
           <div className="dashboard-box">
-            <h4>New service booking received.</h4>
+            <p>New service booking received.</p>
           </div>
           <div className="dashboard-box">
-            <h4>Customer inquiry pending response.</h4>
+            <p>Customer inquiry pending response.</p>
           </div>
           <div className="dashboard-box">
-            <h4>System update available.</h4>
+            <p>System update available.</p>
           </div>
         </div>
       </div>

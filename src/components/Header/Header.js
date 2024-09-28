@@ -16,14 +16,12 @@ function Header({ text = "AquaHub Kenya Admin Panel" }) {
     };
 
     return (
-        <header className="header">
-            <h1>{text}</h1>
-            <div className="logout-container">
-                <button className="logout-button" onClick={handleLogout}>
-                    Logout
-                </button>
-            </div>
-        </header>
+      <header className="header">
+        <h1 className="heading">{text}</h1>
+        <button className="logout-button" onClick={handleLogout}>
+          <p>Logout</p>
+        </button>
+      </header>
     );
 }
 

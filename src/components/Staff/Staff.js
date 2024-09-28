@@ -74,7 +74,7 @@ const Staff = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <h1>Staff Management</h1>
       <input
         type="text"

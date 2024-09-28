@@ -11,6 +11,7 @@ import ReportList from './components/Reports/ReportList';
 import ReportDetails from './components/Reports/ReportDetails';
 import './App.css';
 import { supabase } from './backend/client.js';
+import Loader from './components/Loader.js';
 
 function App() {
   const [isSidebarHidden, setIsSidebarHidden] = useState(false);
@@ -53,7 +54,7 @@ function App() {
   return (
     <div className="App">
       {loading ? (
-        <div>Loading...</div>
+        <Loader />
       ) : (
         <>
           {isAuthenticated ? (
@@ -65,9 +66,9 @@ function App() {
                 <Header />
               </header>
               
-              <Sidebar className={isSidebarHidden ? 'hidden' : ''} />
               
               <div className={`main-layout ${isSidebarHidden ? 'sidebar-hidden' : ''}`}>
+                <Sidebar className={isSidebarHidden ? 'hidden' : ''} />
                 <main>
                   <Routes>
                     <Route path="/dashboard" element={<Dashboard />} />
