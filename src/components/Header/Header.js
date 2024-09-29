@@ -19,7 +19,7 @@ function Header({ text = "AquaHub Kenya Admin Panel" }) {
       <header className="header">
         <h1 className="heading">{text}</h1>
         <button className="logout-button" onClick={handleLogout}>
-          <p>Logout</p>
+          <p>Logout &rarr;</p>
         </button>
       </header>
     );
