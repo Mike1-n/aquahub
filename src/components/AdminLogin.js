@@ -69,8 +69,8 @@ const AdminLogin = () => {
     formWrapper: {
       borderRadius: "8px",
       // padding: "40px",
-      width: "100%",
-      maxWidth: "300px",
+      width: "max-content",
+      minWidth: "300px",
     },
     title: {
       marginBottom: "30px",
@@ -82,8 +82,7 @@ const AdminLogin = () => {
     label: {
       display: "block",
       marginBottom: "5px",
-      // color: "#666",
-      fontWeight: "600",
+      fontWeight: "500",
     },
     input: {
       width: "100%",
@@ -127,7 +126,7 @@ const AdminLogin = () => {
   return (
     <div style={styles.container}>
       <div style={styles.formWrapper}>
-        <h2 style={styles.title}>Admin Login</h2>
+        <h2 style={styles.title}>Administrator Sign-In</h2>
         {loading ? (
           <div style={styles.loader}>Loading...</div>
         ) : (
@@ -160,7 +159,8 @@ const AdminLogin = () => {
               style={styles.button}
               disabled={isButtonLoading} // Disable the button while loading
             >
-              {isButtonLoading ? 'Logging in...' : 'Login'} {/* Change button text */}
+              {isButtonLoading ? "Logging in..." : `Login and Continue`}{" "}
+              {/* Change button text */}
             </button>
           </form>
         )}
