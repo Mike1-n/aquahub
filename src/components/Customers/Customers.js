@@ -72,7 +72,7 @@ const Customer = () => {
   };
 
   return (
-    <div>
+    <div className="dashboard">
       {loading ? (
         <div>Loading...</div> // Loading message
       ) : (
@@ -109,9 +109,10 @@ const Customer = () => {
                     <button
                       style={{
                         background: customer.status === 'active' ? 'red' : 'green',
-                        borderRadius: '10px',
+                        borderRadius: '5px',
                         color: 'white',
-                        padding: '5px 10px',
+                        padding: '5px 5px',
+                        width: "100%",
                       }}
                       onClick={() => toggleCustomerStatus(customer.customer_id, customer.status)}
                     >

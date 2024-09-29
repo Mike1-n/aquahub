@@ -19,8 +19,16 @@ button {
   cursor: pointer;
 }
 
+.status-buttons{
+  border-bottom: 1px solid rgb(230, 230, 230);
+  width: max-content;
+}
+
 .status-buttons button {
-  background-color: #28a745; /* Green color for status buttons */
+  background-color: transparent;
+  color: black; 
+  border-radius: .4rem;
+  font-weight: 600px;
 }
 
 .status-buttons button:hover {
@@ -57,7 +65,7 @@ table {
 }
 
 table, th, td {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 
 th, td {

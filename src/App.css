@@ -8,7 +8,7 @@
   --secondary-color: #F8FFF4;
 }
 
-html{
+html, input, button{
   font-family: Inter !important;
 }
 
@@ -45,14 +45,14 @@ main{
   color: black;
   width: 15vw;
   position: sticky;
-  top: var(--header-height)
+  top: var(--header-height);
+  height: max-content;
 }
 
 /* Main layout */
 .main-layout {
   display: flex;
   height: calc(100svh - var(--header-height)); /* 100svh minus the header height */
-  background-color: var(--background-color);
   margin-top: 1.3rem
 }
 
