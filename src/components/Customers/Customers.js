@@ -9,6 +9,8 @@ const Customer = () => {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [loading, setLoading] = useState(true); // Loading state
 
+  console.log(selectedStatus)
+
   const fetchCustomers = async () => {
     setLoading(true); // Set loading to true before fetching
     const { data, error } = await supabase.from('customers').select();
@@ -78,10 +80,30 @@ const Customer = () => {
       ) : (
         <>
           <div className="status-buttons">
-            <button onClick={() => setSelectedStatus('All')}>All</button>
-            <button onClick={() => setSelectedStatus('pending')}>Pending</button>
-            <button onClick={() => setSelectedStatus('active')}>Active</button>
-            <button onClick={() => setSelectedStatus('inactive')}>Inactive</button>
+            <button
+              className={selectedStatus === "All" ? "active" : ""}
+              onClick={() => setSelectedStatus("All")}
+            >
+              All
+            </button>
+            <button
+              className={selectedStatus === "pending" ? "active" : ""}
+              onClick={() => setSelectedStatus("pending")}
+            >
+              Pending
+            </button>
+            <button
+              className={selectedStatus === "active" ? "active" : ""}
+              onClick={() => setSelectedStatus("active")}
+            >
+              Active
+            </button>
+            <button
+              className={selectedStatus === "inactive" ? "active" : ""}
+              onClick={() => setSelectedStatus("inactive")}
+            >
+              Inactive
+            </button>
           </div>
 
           <table>
@@ -97,7 +119,7 @@ const Customer = () => {
               </tr>
             </thead>
             <tbody>
-              {filteredCustomers.map(customer => (
+              {filteredCustomers.map((customer) => (
                 <tr key={customer.id} style={getStatusStyle(customer.status)}>
                   <td>{customer.first_name}</td>
                   <td>{customer.last_name}</td>
@@ -108,15 +130,21 @@ const Customer = () => {
                   <td>
                     <button
                       style={{
-                        background: customer.status === 'active' ? 'red' : 'green',
-                        borderRadius: '5px',
-                        color: 'white',
-                        padding: '5px 5px',
-                        width: "100%",
+                        background: customer.status === "active" ? "rgb(123 0 0)" : "green",
+                        borderRadius: "5px",
+                        color: "#ffffff",
+                        padding: ".5rem .8rem",
+                        width: "max-content",
+                        fontWeight: "500",
                       }}
-                      onClick={() => toggleCustomerStatus(customer.customer_id, customer.status)}
+                      onClick={() =>
+                        toggleCustomerStatus(
+                          customer.customer_id,
+                          customer.status
+                        )
+                      }
                     >
-                      {customer.status === 'active' ? 'Deactivate' : 'Activate'}
+                      {customer.status === "active" ? "Deactivate" : "Activate"}
                     </button>
                   </td>
                 </tr>
