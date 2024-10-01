@@ -44,16 +44,14 @@ main{
 .sidebar {
   color: black;
   width: 15vw;
-  position: sticky;
-  top: var(--header-height);
-  height: max-content;
+  border-right: 1px solid rgb(222, 222, 222);
+  padding: 20px 10px;
 }
 
 /* Main layout */
 .main-layout {
   display: flex;
-  height: calc(100svh - var(--header-height)); /* 100svh minus the header height */
-  margin-top: 1.3rem
+  height: 100%;
 }
 
 /* Sidebar content */
@@ -61,16 +59,17 @@ main{
   display: flex;
   flex-direction: column;
   height: 100%; /* Full height */
-  padding-inline: .4rem;
+  position: fixed;
 }
 
 .sidebar h2 {
-  color: #7f7f7f;
+  color: #a6a6a6;
   /* text-align: center; */
   padding: 10px;
   line-height: 0;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: .9rem;
+  text-transform: uppercase;
 }
 
 .sidebar ul {
