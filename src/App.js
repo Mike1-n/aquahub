@@ -60,9 +60,9 @@ function App() {
           {isAuthenticated ? (
             <>
               <header className='topBar'>
-                <button className="sidebar-toggle" onClick={toggleSidebar}>
+                {/* <button className="sidebar-toggle" onClick={toggleSidebar}>
                   <i className={`fas fa-${isSidebarHidden ? 'bars-staggered' : 'bars'}`}></i>
-                </button>
+                </button> */}
                 <Header />
               </header>
               

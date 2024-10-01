@@ -61,6 +61,7 @@ main{
   display: flex;
   flex-direction: column;
   height: 100%; /* Full height */
+  padding-inline: .4rem;
 }
 
 .sidebar h2 {
@@ -99,8 +100,10 @@ main{
 }
 
 .sidebar ul li a:hover {
-  background-color: #34495e; /* Darker blue on hover */
+  background-color: #001325; /* Darker blue on hover */
+  color: white;
   transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
 .topBar{
@@ -111,7 +114,8 @@ main{
     height: var(--header-height);
     position: sticky;
     top: 0;
-    width: 100%;
+    /* width: 100%; */
+    padding-inline: 1rem;
   /* Sidebar toggle button */
   .sidebar-toggle {
     width: 2rem;
