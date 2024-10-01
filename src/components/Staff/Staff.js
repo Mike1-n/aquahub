@@ -74,56 +74,78 @@ const Staff = () => {
   };
 
   return (
-    <div>
-      <h1>Staff Management</h1>
-      <input
-        type="text"
-        placeholder="Search staff..."
-        value={search}
-        onChange={handleSearch}
-      />
-      <div className="role-buttons">
-        <button onClick={() => handleRoleChange('All')}>All</button>
-        <button onClick={() => handleRoleChange('Technician')}>Technician</button>
-        <button onClick={() => handleRoleChange('Supervisor')}>Supervisor</button>
-        <button onClick={() => handleRoleChange('Service Manager')}>Service Manager</button>
-        <button onClick={() => handleRoleChange('Finance Manager')}>Finance Manager</button>
-        <button onClick={() => handleRoleChange('Driver')}>Driver</button>
+    <div className="main">
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <h1>Staff Management</h1>
+        <input
+          type="text"
+          placeholder="Search staff..."
+          value={search}
+          onChange={handleSearch}
+          style={{ marginLeft: "auto" }}
+        />
       </div>
-      <button className="add" onClick={handleAddStaff}>Add Staff</button>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredStaff.map(member => (
-            <tr key={member.id} className={`status-${member.status.toLowerCase()}`}>
-              <td>{`${member.first_name} ${member.last_name}`}</td>
-              <td>{member.role}</td>
-              <td>{member.status}</td>
-              <td>
-                <button
-                  className={member.status === 'Active' ? "deactivate" : "activate"}
-                  onClick={() => handleToggleStaffStatus(member.id, member.status)}
-                >
-                  {member.status === 'Active' ? 'Deactivate' : 'Activate'}
-                </button>
-                <button
-                  className="remove"
-                  onClick={() => handleRemoveStaff(member.id)}
-                >
-                  Remove
-                </button>
-              </td>
+      <section>
+        <div className="role-buttons">
+          <button onClick={() => handleRoleChange("All")}>All</button>
+          <button onClick={() => handleRoleChange("Technician")}>
+            Technician
+          </button>
+          <button onClick={() => handleRoleChange("Supervisor")}>
+            Supervisor
+          </button>
+          <button onClick={() => handleRoleChange("Service Manager")}>
+            Service Manager
+          </button>
+          <button onClick={() => handleRoleChange("Finance Manager")}>
+            Finance Manager
+          </button>
+          <button onClick={() => handleRoleChange("Driver")}>Driver</button>
+          <button className="add" onClick={handleAddStaff}>
+            Add Staff
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {filteredStaff.map((member) => (
+              <tr
+                key={member.id}
+                className={`status-${member.status.toLowerCase()}`}
+              >
+                <td>{`${member.first_name} ${member.last_name}`}</td>
+                <td>{member.role}</td>
+                <td>{member.status}</td>
+                <td>
+                  <button
+                    className={
+                      member.status === "Active" ? "deactivate" : "activate"
+                    }
+                    onClick={() =>
+                      handleToggleStaffStatus(member.id, member.status)
+                    }
+                  >
+                    {member.status === "Active" ? "Deactivate" : "Activate"}
+                  </button>
+                  <button
+                    className="remove"
+                    onClick={() => handleRemoveStaff(member.id)}
+                  >
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
     </div>
   );
 };

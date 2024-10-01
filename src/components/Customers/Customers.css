@@ -1,11 +1,14 @@
 /* src/components/Customer.css */
+.dashboard{
+  padding: 0 0;
+  gap: 2rem;
+}
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 input {
-  margin-bottom: 20px;
   padding: 8px;
   font-size: 16px;
 }
@@ -17,29 +20,38 @@ button {
   border: none;
   color: white;
   cursor: pointer;
+  background-color: #0056b3;
+}
+
+.status-buttons{
+  border-bottom: 1px solid rgb(249 249 249);
+  padding-bottom: .7rem;
 }
 
 .status-buttons button {
-  background-color: #28a745; /* Green color for status buttons */
+  background-color: transparent;
+  color: rgb(67, 67, 67); 
+  border-radius: .4rem;
+  font-weight: 500;
 }
 
 .status-buttons button:hover {
-  background-color: #218838; /* Darker green for hover effect */
+  color: blue;
 }
 
 button.activate {
-  background-color: #28a745; /* Green color for activate */
+  /* color: blue !important; */
 }
 
 button.activate:hover {
   background-color: #218838; /* Darker green for hover effect */
 }
 
-button.deactivate {
-  background-color: #dc3545; /* Red color for deactivate */
+button.inactive {
+  background-color: #dc3545; /* Red color for in.inactive */
 }
 
-button.deactivate:hover {
+button.inactive:hover {
   background-color: #c82333; /* Darker red for hover effect */
 }
 
@@ -57,7 +69,7 @@ table {
 }
 
 table, th, td {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 
 th, td {
@@ -91,7 +103,7 @@ th {
   opacity: 0.6; /* Faded effect */
 }
 
-/* Style for deactivated status */
+/* Style for in.inactived status */
 .inactive {
   background-color: red;
   opacity: 0.5; /* Faded effect */

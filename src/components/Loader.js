@@ -1,6 +1,7 @@
 // src/components/Loader.js
 
 import React from 'react';
+import "./Loader.css"
 
 const Loader = () => {
   const loaderStyle = {
@@ -27,10 +28,10 @@ const Loader = () => {
     color: '#3498db', // Blue
   };
 
+
   return (
-    <div style={loaderStyle}>
-      <div style={spinnerStyle}></div>
-      <p style={textStyle}>Loading...</p>
+    <div className='loader-wrapper'>
+      <div class="loader"></div>
     </div>
   );
 };

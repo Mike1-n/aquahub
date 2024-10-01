@@ -59,72 +59,74 @@ const AdminLogin = () => {
 
   const styles = {
     container: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh',
-      backgroundColor: '#f0f0f0',
-      padding: '20px',
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      backgroundColor: "white",
+      padding: "20px",
     },
     formWrapper: {
-      background: '#ffffff',
-      borderRadius: '8px',
-      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-      padding: '40px',
-      width: '100%',
-      maxWidth: '400px',
+      borderRadius: "8px",
+      // padding: "40px",
+      width: "max-content",
+      minWidth: "300px",
     },
     title: {
-      textAlign: 'center',
-      marginBottom: '20px',
-      color: '#333',
+      marginBottom: "30px",
+      fontSize: "2rem",
     },
     formGroup: {
-      marginBottom: '15px',
+      marginBottom: "15px",
     },
     label: {
-      display: 'block',
-      marginBottom: '5px',
-      color: '#666',
+      display: "block",
+      marginBottom: "5px",
+      fontWeight: "500",
     },
     input: {
-      width: '100%',
-      padding: '10px',
-      border: '1px solid #ddd',
-      borderRadius: '4px',
-      fontSize: '16px',
-      boxSizing: 'border-box',
+      width: "100%",
+      padding: "5px 15px",
+      border: "1px solid #ddd",
+      boxShadow: "0px 1px #d7d7d7",
+      borderRadius: "4px",
+      fontSize: "14px",
+      fontWeight: "500",
+      boxSizing: "border-box",
+      height: "2.8rem",
     },
     errorMessage: {
-      color: 'red',
-      marginTop: '10px',
-      textAlign: 'center',
+      color: "red",
+      marginTop: "10px",
+      textAlign: "center",
     },
     button: {
-      width: '100%',
-      padding: '10px',
-      backgroundColor: '#007BFF',
-      color: '#fff',
-      border: 'none',
-      borderRadius: '4px',
-      fontSize: '16px',
-      cursor: 'pointer',
-      transition: 'background-color 0.3s',
+      width: "100%",
+      padding: "10px",
+      backgroundColor: "#058ED9",
+      color: "#fff",
+      border: "none",
+      borderRadius: "4px",
+      fontSize: "14px",
+      cursor: "pointer",
+      transition: "background-color 0.3s",
+      height: "2.9rem",
+      fontWeight: "700",
     },
     buttonHover: {
-      backgroundColor: '#0056b3', // Darker blue for hover
+      backgroundColor: "#0056b3", // Darker blue for hover
     },
     loader: {
-      textAlign: 'center',
-      color: '#007BFF',
-      fontSize: '18px',
-    }
+      textAlign: "center",
+      color: "#007BFF",
+      fontSize: "18px",
+    },
   };
 
   return (
     <div style={styles.container}>
       <div style={styles.formWrapper}>
-        <h2 style={styles.title}>Admin Login</h2>
+        <h2 style={styles.title}>Administrator Sign-In</h2>
         {loading ? (
           <div style={styles.loader}>Loading...</div>
         ) : (
@@ -157,7 +159,8 @@ const AdminLogin = () => {
               style={styles.button}
               disabled={isButtonLoading} // Disable the button while loading
             >
-              {isButtonLoading ? 'Logging in...' : 'Login'} {/* Change button text */}
+              {isButtonLoading ? "Logging in..." : `Login and Continue`}{" "}
+              {/* Change button text */}
             </button>
           </form>
         )}

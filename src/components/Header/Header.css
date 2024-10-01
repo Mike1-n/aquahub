@@ -2,10 +2,12 @@
 
 .header {
     /* background-color: #0b9927; */
-    color: #fff;
-    padding: 10px;
+    /* color: #fff; */
+    /* padding: 10px; */
     text-align: center;
     width: 100%;
+    display: flex;
+    place-items: center;
 }
 
 .header nav ul {
@@ -27,21 +29,29 @@
     text-decoration: underline;
 }
 .logout-container {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    margin-left: auto;
+}
+
+.heading{
+    /* margin-left: auto; */
+    margin-right: auto;
+    font-weight: normal;
 }
 
 .logout-button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: transparent;
+    padding: 1rem 1rem;
+    height: 10px;
+    border-radius: .2rem;
+    display: grid;
+    place-content: center;
+    p{
+        color: #28262C;
+        font-weight: 600;
+        font-size: .9rem;
+    }
 }
 
 .logout-button:hover {
-    background-color: #ff3333;
+    background-color: #d7d7d7;
 }

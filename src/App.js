@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'; 
 import AdminLogin from './components/AdminLogin';
-import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Dashboard from './components/Dashboard/Dashboard';
 import Customers from './components/Customers/Customers';
@@ -11,6 +10,8 @@ import ReportList from './components/Reports/ReportList';
 import ReportDetails from './components/Reports/ReportDetails';
 import './App.css';
 import { supabase } from './backend/client.js';
+import Loader from './components/Loader.js';
+
 
 function App() {
   const [isSidebarHidden, setIsSidebarHidden] = useState(false);
@@ -53,37 +54,48 @@ function App() {
   return (
     <div className="App">
       {loading ? (
-        <div>Loading...</div>
+        <Loader />
       ) : (
         <>
           {isAuthenticated ? (
             <>
-              <header className='topBar'>
-                <button className="sidebar-toggle" onClick={toggleSidebar}>
-                  <i className={`fas fa-${isSidebarHidden ? 'bars-staggered' : 'bars'}`}></i>
-                </button>
-                <Header />
-              </header>
               
-              <Sidebar className={isSidebarHidden ? 'hidden' : ''} />
-              
-              <div className={`main-layout ${isSidebarHidden ? 'sidebar-hidden' : ''}`}>
+
+              <div
+                className={`main-layout ${
+                  isSidebarHidden ? "sidebar-hidden" : ""
+                }`}
+              >
+                <Sidebar className={isSidebarHidden ? "hidden" : ""} />
+                
                 <main>
                   <Routes>
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/customers" element={<Customers customers={customers} />} />
+                    <Route
+                      path="/customers"
+                      element={<Customers customers={customers} />}
+                    />
                     <Route path="/staff" element={<Staff />} />
                     <Route path="/suppliers" element={<Suppliers />} />
                     <Route path="/reports" element={<ReportList />} />
-                    <Route path="/reports/details/:id" element={<ReportDetails />} />
-                    <Route path="/settings" element={<div>Settings Content</div>} />
+                    <Route
+                      path="/reports/details/:id"
+                      element={<ReportDetails />}
+                    />
+                    <Route
+                      path="/settings"
+                      element={<div>Settings Content</div>}
+                    />
                   </Routes>
                 </main>
               </div>
             </>
           ) : (
             <Routes>
-              <Route path="/" element={<AdminLogin setIsAuthenticated={setIsAuthenticated} />} />
+              <Route
+                path="/"
+                element={<AdminLogin setIsAuthenticated={setIsAuthenticated} />}
+              />
             </Routes>
           )}
         </>
