@@ -25,6 +25,8 @@ h1 {
     border: none;
     color: white;
     cursor: pointer;
+    font-family: Inter !important;
+    border-radius: .2rem;
   }
   
   .role-buttons button {
@@ -79,6 +81,10 @@ h1 {
   th, td {
     padding: 12px;
     text-align: left;
+    /* font-weight: 500; */
+  }
+  th{
+    font-weight: 600;
   }
   
   th {
